@@ -1,0 +1,23 @@
+<h2>New article</h2>
+<div class="card">
+    <div class="card-body">
+        <form action="/api/admin/articles" method="POST">            
+            <label for="category">Category:</label>
+                <input type="text" name="category" id="category" placeholder="Category" class="form-control">
+                <br>
+            <label for="title">Title:</label>
+                <input type="text" name="title" id="title" placeholder="Title" class="form-control">
+                <br>
+            <label for="summary">Summary:</label>
+                <input type="text" name="summary" id="summary" placeholder="Summary" class="form-control">
+                <br>
+            <label for="firstParagraph">First paragraph:</label>
+                <input type="text" name="firstParagraph" id="firstParagraph" placeholder="First paragraph" class="form-control">
+                <br>
+            <label for="body">Body:</label>
+                <input type="text" name="body" id="body" placeholder="Body" class="form-control">
+                <br>
+            <button type="submit" class="btn btn-success">Add article</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<h2>Article's list</h2>
+{{#each results}}
+    <h2>{{author}}</h2>
+    <p>{{category}}</p>
+    <p>{{summary}}</p>
+    <a href="/deletar/{{id}}"><button>Delete</button></a>
+    <hr>
+{{/each}}
+<hr>
+<a href="/admin/articles/add"><button class="btn btn-success">New article</button></a>
