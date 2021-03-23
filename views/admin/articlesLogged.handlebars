@@ -1,0 +1,21 @@
+
+<h2>Article's list</h2>
+{{#each results}}
+    Author: {{ author.name }}
+    <br>
+    Category: {{ category }}
+    <br>
+    Title: {{ title }}
+    <br>
+    Summary: {{ summary }}
+    <br>
+    First Paragraph: {{ firstParagraph }}
+    <br>
+    Body: {{ body }}
+    <br>
+    <a href="/api/admin/articles"><button class="btn btn-success">New article</button></a>
+    <a href="/api/admin/articles/{{id}}"><button class="btn btn-warning">Update article</button></a>
+    <a href="/api/admin/articles/{{id}}"><button class="btn btn-danger">Delete article</button></a>
+    <hr>
+{{/each}}
+

@@ -1,7 +1,6 @@
 exports.up = knex => knex.schema.createTable('author', (table)=>{
     table.increments('id').primary();
-    table.string('name');
-    table.string('picture');
+    table.json('author');
 
     //relations
     table.integer('article_id')

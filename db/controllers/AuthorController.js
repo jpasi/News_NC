@@ -13,18 +13,23 @@ module.exports = {
     },
     async create(req, res, next) {
         try {
+            
             const { name, picture } = req.body
+            const author = { name: name, picture: picture }
         
-            await knex('author').insert({ name, picture })
+            await knex('author').insert({ author })
+
+            res.redirect('/authors')
 
             return res.status(201).send()
         } catch (error) {
             next(error)
-        }
+        } 
     },
     async update(req, res, next) {
         try {
             const { name, picture } = req.body
+            const author = { name: name, picture: picture }
             const { id } = req.params
         
             await knex('author').update({ 

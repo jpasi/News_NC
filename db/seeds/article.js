@@ -7,7 +7,6 @@ exports.seed = function(knex) {
       return knex('article').insert([
         {
           id: 1,
-          author: ('{"name": "Juan Perez", "picture": "https://unsplash.com/photos/9sviUxR5dIw"}'),
           category: "Animal",
           title: "Elephant",
           summary: "This is a elephant's birth",
@@ -16,7 +15,6 @@ exports.seed = function(knex) {
           is_logged: 0
         },{
             id: 2,
-            author: ('{"name": "Pedro Garcia", "picture": "https://unsplash.com/photos/Wpnoqo2plFA"}'),
             category: "Tech",
             title: "Excel as tech",
             summary: "Microsoft wants excel as tech",

@@ -1,0 +1,26 @@
+<h2>Update article</h2>
+<div class="card">
+    <div class="card-body">
+        {{#each results}}
+        <form action="/api/admin/articles/{{id}}" method="PUT">     
+            <label type="hidden" name="id" value="{{id}}"></label>       
+            <label for="category">Category:</label>
+                <input type="text" name="category" id="category" placeholder="Category" class="form-control" value="{{category}}">
+                <br>
+            <label for="title">Title:</label>
+                <input type="text" name="title" id="title" placeholder="Title" class="form-control" value="{{title}}">
+                <br>
+            <label for="summary">Summary:</label>
+                <input type="text" name="summary" id="summary" placeholder="Summary" class="form-control" value="{{summary}}">
+                <br>
+            <label for="firstParagraph">First paragraph:</label>
+                <input type="text" name="firstParagraph" id="firstParagraph" placeholder="First paragraph" class="form-control" value="{{firstParagraph}}">
+                <br>
+            <label for="body">Body:</label>
+                <input type="text" name="body" id="body" placeholder="Body" class="form-control" value="{{body}}">
+                <br>
+            <button type="submit" class="btn btn-success">Update article</button>
+        </form>
+        {{/each}}
+    </div>
+</div>
